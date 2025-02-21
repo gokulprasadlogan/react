@@ -1,0 +1,4 @@
+- `defer` in script is used to run the java script once the html are loaded before the js. or we can use the script in the last of body without defer.
+- `type = 'module'` in the script file is to help js files to import and export js files.
+- `minified` is the proceess of optimising by recuing the variable names in the build process to reduce the size of js files when loaded in the browser.
+-

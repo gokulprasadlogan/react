@@ -1,16 +1,29 @@
+import { CORE_CONCEPTS } from "./data";
+import Header from "./assets/components/Header";
+import CoreConcept from "./assets/components/CoreConcepts";
+import TabButton from "./assets/components/TabButton";
+
 function App() {
   return (
     <div>
-      <header>
-        <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
-        <h1>React Essentials</h1>
-        <p>
-          Fundamental React concepts you will need for almost any app you are
-          going to build!
-        </p>
-      </header>
+      <Header />
       <main>
-        <h2>Time to get started!</h2>
+        <section id="core-concepts">
+          <h2>Core Concepts</h2>
+          <ul>
+            {CORE_CONCEPTS.map((concepts) => (
+              <CoreConcept key={concepts.title} {...concepts} />
+            ))}
+          </ul>
+        </section>
+        <section id="examples">
+          <menu>
+            <TabButton>Components</TabButton>
+            <TabButton>JSX</TabButton>
+            <TabButton>Props</TabButton>
+            <TabButton>State</TabButton>
+          </menu>
+        </section>
       </main>
     </div>
   );
